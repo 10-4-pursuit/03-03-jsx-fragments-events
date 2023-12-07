@@ -10,12 +10,28 @@ function App() {
     </React.Fragment>
   );
   const elementTwo = <button onClick={() => alert('You clicked the button!')}>Click me</button>
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    console.log(event.target.message.value);
+    event.target.reset();
+  }
+  const form = (
+    <React.Fragment>
+      <form onSubmit={onSubmit}>
+        <label>Enter a Message:</label><br/>
+        <input name='message' type='text' />
+        <input type='submit' className='submit'/>
+      </form>
+    </React.Fragment>
+  );
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {elementOne}
         {elementTwo}
+        {form}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
