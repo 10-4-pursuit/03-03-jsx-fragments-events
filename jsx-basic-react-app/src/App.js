@@ -1,38 +1,45 @@
-import React, { useState } from 'react';
-import './App.css';
+// importing useState from React
+import React, { useState } from "react";
+import "./App.css";
 
+// Create a functional component called App
 function App() {
-  const [inputValue, setInputValue] = useState('');
+  // Create state variables for the input value and the form submission
+  const [inputValue, setInputValue] = useState("");
 
   // Function to handle form submission
   const handleSubmit = (event) => {
-    event.preventDefault(); 
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    // Log the input value
     console.log(inputValue);
-  }
+  };
 
   // Function to handle input change
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-  }
+  };
 
+  // Return the JSX
   return (
-    <React.Fragment>
+    <div className="App">
+    <>
       <h1>Welcome to React!</h1>
       <p>Hi, my name is Daniel and I'm learning React.</p>
-      <button onClick={() => alert('Whats good!')}>Click Me</button>
+      {/* Create a button with an onClick handler that alerts "Whats good!" */}
+      <button className="button" onClick={() => alert("Whats good!")}>Click Me</button>
 
       {/* Create a form with a text input and a submit button */}
       <form onSubmit={handleSubmit}>
-        <input 
-          type="text"
-          value={inputValue}
-          onChange={handleInputChange} 
-        />
+        {/* Create an input field with the value and onChange handler */}
+         <p>Enter your name:</p>  
+        <input type="text" value={inputValue} onChange={handleInputChange} />
+        {/* Create a submit button */}
         <button type="submit">Submit</button>
       </form>
-    </React.Fragment>
-  )
+    </>
+    </div>
+  );
 }
 
 export default App;
-

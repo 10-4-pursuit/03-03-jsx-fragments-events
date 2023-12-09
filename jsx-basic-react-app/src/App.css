@@ -22,10 +22,30 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.button {
+  background-color: #61dafb;
+  border-radius: 20px;
+  border: border-box;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button{
+  margin: 10px;
+  background-color: #61dafb;
+  border: border-box;
+  color: white;
 }
 
 @keyframes App-logo-spin {
