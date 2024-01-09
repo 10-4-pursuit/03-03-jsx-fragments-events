@@ -4,14 +4,14 @@ function App() {
   const element = (
     <>
       <h1>Welcome To React!</h1>
-      <p>Hi, I'm Yah-neen, and I'm a Professional Debugger</p>
+      <p>Hi, I'm Janine(Yah-neen), and I'm a Fullstack Web Developer</p>
     </>
   );
 
   const click = (
     <button
       style={{
-        marginTop: '10px',  // Add space above the button if needed
+        marginTop: '10px',
         marginLeft: 'auto',
         marginRight: 'auto',
       }}
